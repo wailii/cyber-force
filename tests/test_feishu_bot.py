@@ -382,7 +382,7 @@ def test_webhook_route_handles_url_verification_and_message_event() -> None:
 
 
 def test_classifier_can_route_plain_natural_language_memory_without_prefix() -> None:
-    memory = FakeMemoryGateway(add_result=FakeAddMemoryResult("外力想去 AI-native 创业公司做 Agent PM"))
+    memory = FakeMemoryGateway(add_result=FakeAddMemoryResult("主理人想去 AI-native 创业公司做 Agent PM"))
     reply = FakeReplyClient()
     syncer = FakeSyncer()
     classifier = FakeClassifier(
@@ -444,7 +444,7 @@ def test_memory_syncer_splits_memory_kb_and_logs_into_multiple_docs(tmp_path: Pa
     (kb_root / "identity").mkdir(parents=True, exist_ok=True)
     (kb_root / "governance").mkdir(parents=True, exist_ok=True)
     (kb_root / "memory" / "logs").mkdir(parents=True, exist_ok=True)
-    (kb_root / "identity" / "constitution.md").write_text("# 身份\n我是外力\n", encoding="utf-8")
+    (kb_root / "identity" / "constitution.md").write_text("# 身份\n我是主理人\n", encoding="utf-8")
     (kb_root / "governance" / "decision_policy.yaml").write_text("mode: plan_only\n", encoding="utf-8")
     (kb_root / "memory" / "MEMORY.md").write_text("# 长期记忆\n- 项目: cyber-force\n", encoding="utf-8")
     (kb_root / "memory" / "logs" / "2026-03-29.md").write_text("# 日志\n- 今天新增候选记忆\n", encoding="utf-8")
@@ -497,7 +497,7 @@ def test_memory_syncer_splits_memory_kb_and_logs_into_multiple_docs(tmp_path: Pa
     assert "# 赛博外力知识与规则" in kb_markdown
     assert "## kb/identity/constitution.md" in kb_markdown
     assert "## kb/governance/decision_policy.yaml" in kb_markdown
-    assert "我是外力" in kb_markdown
+    assert "我是主理人" in kb_markdown
     assert "mode: plan_only" in kb_markdown
     assert "kb/memory/MEMORY.md" not in kb_markdown
     assert "2026-03-29.md" not in kb_markdown

@@ -353,7 +353,7 @@ class MarkdownMemoryStore:
             return [
                 ExtractedMemoryItem(
                     memory_id="identity.job_target",
-                    fact="外力求职目标是 AI-native 创业公司的 Agent PM",
+                    fact="主理人的求职目标是 AI-native 创业公司的 Agent PM",
                     target_zone=target_zone,
                     section="工作与职业" if target_zone == MemoryZone.long_term.value else None,
                 )
@@ -504,7 +504,7 @@ class MarkdownMemoryStore:
         return sections
 
     def _write_memory_sections(self, sections: dict[str, dict[str, str]]) -> None:
-        lines = ["# 外力的长期记忆", ""]
+        lines = ["# 主理人的长期记忆", ""]
         for section in MEMORY_SECTIONS:
             lines.append(f"## {section}")
             lines.append(MEMORY_SECTION_COMMENTS[section])

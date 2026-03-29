@@ -49,7 +49,7 @@ def test_add_memory_writes_long_term_fact_into_memory_markdown(tmp_path: Path) -
 
     assert result.extracted_items[0].fact == "生日：1990-01-01"
     assert result.updated_long_term is True
-    assert "# 外力的长期记忆" in memory_md
+    assert "# 主理人的长期记忆" in memory_md
     assert "## 工作与职业" in memory_md
     assert "生日：1990-01-01" in memory_md
     assert "我的生日是 1990-01-01" not in memory_md
@@ -102,7 +102,7 @@ def test_search_memory_fallback_reads_memory_and_recent_logs(tmp_path: Path) -> 
     logs_dir.mkdir(parents=True, exist_ok=True)
     (memory_root / "MEMORY.md").write_text(
         (
-            "# 外力的长期记忆\n\n"
+            "# 主理人的长期记忆\n\n"
             "## 工作与职业\n"
             "<!-- 求职方向、工作经历、职业判断等 -->\n"
             "- [identity.city] 常驻城市：杭州\n\n"
@@ -177,7 +177,7 @@ def test_search_memory_uses_model_selection_when_available(tmp_path: Path) -> No
     memory_root.mkdir(parents=True, exist_ok=True)
     (memory_root / "MEMORY.md").write_text(
         (
-            "# 外力的长期记忆\n\n"
+            "# 主理人的长期记忆\n\n"
             "## 工作与职业\n"
             "<!-- 求职方向、工作经历、职业判断等 -->\n"
             "- [identity.city] 常驻城市：杭州\n\n"
@@ -205,10 +205,10 @@ def test_memory_smoke_long_term_round_trip(tmp_path: Path) -> None:
 
     from cyber_force.memory import add_memory, search_memory
 
-    add_memory("外力求职目标是 AI-native 创业公司的 Agent PM", "long_term", settings=settings)
+    add_memory("主理人的求职目标是 AI-native 创业公司的 Agent PM", "long_term", settings=settings)
 
     memory_md = (tmp_path / "project" / "kb" / "memory" / "MEMORY.md").read_text(encoding="utf-8")
-    results = search_memory("外力的求职方向", settings=settings)
+    results = search_memory("主理人的求职方向", settings=settings)
 
-    assert "外力求职目标是 AI-native 创业公司的 Agent PM" in memory_md
+    assert "主理人的求职目标是 AI-native 创业公司的 Agent PM" in memory_md
     assert any("Agent PM" in item.fact for item in results)

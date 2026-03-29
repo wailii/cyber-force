@@ -587,7 +587,7 @@ class LarkCliMemorySyncer:
         return files
 
     def _sync_memory_doc(self, manifest: dict[str, Any]) -> dict[str, Any]:
-        memory_markdown = self._read_text(self.memory_path, fallback="# 外力的长期记忆\n")
+        memory_markdown = self._read_text(self.memory_path, fallback="# 主理人的长期记忆\n")
         memory_doc_id = self._resolve_doc_id(
             explicit_doc_id=self.config.memory_doc_id,
             manifest_doc_id=str(manifest.get("memory_doc_id", "")).strip(),

@@ -15,7 +15,7 @@ permissions:
   push_notify: propose
   local_files: none
 identity_claim:
-  owner_id: wali
+  owner_id: principal
   runtime_role: carrier
 session_defaults:
   require_confirmation_for:
