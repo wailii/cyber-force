@@ -1,6 +1,6 @@
 # Carrier Attach Protocol
 
-赛博外力把“我”定义成一个主权运行包，carrier 只是装载和执行接口。carrier 不能定义人格，也不能越权执行。
+Cyber Force 把“我”定义成一个主权运行包，carrier 只是装载和执行接口。carrier 不能定义人格，也不能越权执行。
 
 ## 目标
 

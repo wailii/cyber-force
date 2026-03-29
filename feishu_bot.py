@@ -539,7 +539,7 @@ class LarkCliMemorySyncer:
 
     def _render_kb_snapshot(self) -> str:
         lines = [
-            "# 赛博外力知识与规则",
+            "# Cyber Force 知识与规则",
             "",
             "以下内容同步自本地 `kb/identity`、`kb/governance` 与 `kb/memory` 的规则/索引文件。",
             "",
@@ -591,7 +591,7 @@ class LarkCliMemorySyncer:
         memory_doc_id = self._resolve_doc_id(
             explicit_doc_id=self.config.memory_doc_id,
             manifest_doc_id=str(manifest.get("memory_doc_id", "")).strip(),
-            title="赛博外力 MEMORY",
+            title="Cyber Force MEMORY",
             initial_markdown=memory_markdown,
         )
         self._update_doc(memory_doc_id, memory_markdown)
@@ -603,7 +603,7 @@ class LarkCliMemorySyncer:
         kb_doc_id = self._resolve_doc_id(
             explicit_doc_id=self.config.kb_doc_id,
             manifest_doc_id=str(manifest.get("kb_doc_id", "")).strip(),
-            title="赛博外力 KB",
+            title="Cyber Force KB",
             initial_markdown=kb_markdown,
         )
         self._update_doc(kb_doc_id, kb_markdown)
@@ -621,7 +621,7 @@ class LarkCliMemorySyncer:
         log_markdown = self._read_text(log_path, fallback=f"# {log_path.stem} 日志\n")
         if not log_doc_id:
             log_doc_id = self._create_doc(
-                title=f"赛博外力 日志 {log_path.stem}",
+                title=f"Cyber Force 日志 {log_path.stem}",
                 markdown=log_markdown,
             )
         self._update_doc(log_doc_id, log_markdown)

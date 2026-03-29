@@ -481,7 +481,7 @@ def test_memory_syncer_splits_memory_kb_and_logs_into_multiple_docs(tmp_path: Pa
 
     kb_create = runner.calls[2]
     assert kb_create[:3] == ["lark-cli", "docs", "+create"]
-    assert kb_create[3:5] == ["--title", "赛博外力 KB"]
+    assert kb_create[3:5] == ["--title", "Cyber Force KB"]
 
     kb_update = runner.calls[3]
     assert kb_update[:7] == [
@@ -494,7 +494,7 @@ def test_memory_syncer_splits_memory_kb_and_logs_into_multiple_docs(tmp_path: Pa
         "overwrite",
     ]
     kb_markdown = kb_update[8]
-    assert "# 赛博外力知识与规则" in kb_markdown
+    assert "# Cyber Force 知识与规则" in kb_markdown
     assert "## kb/identity/constitution.md" in kb_markdown
     assert "## kb/governance/decision_policy.yaml" in kb_markdown
     assert "我是主理人" in kb_markdown
@@ -504,7 +504,7 @@ def test_memory_syncer_splits_memory_kb_and_logs_into_multiple_docs(tmp_path: Pa
 
     log_create = runner.calls[4]
     assert log_create[:3] == ["lark-cli", "docs", "+create"]
-    assert log_create[3:5] == ["--title", "赛博外力 日志 2026-03-29"]
+    assert log_create[3:5] == ["--title", "Cyber Force 日志 2026-03-29"]
 
     log_update = runner.calls[5]
     assert log_update[:7] == [
