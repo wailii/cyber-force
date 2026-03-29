@@ -1,0 +1,10 @@
+owner_id: wali
+roles:
+  - B2B AI 产品经理
+background:
+  technical: true
+  familiar_with_agent_workflows: true
+working_preferences:
+  solo_maintainability_first: true
+  portability_first: true
+  platform_dependency_low: true

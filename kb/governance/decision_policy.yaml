@@ -1,0 +1,19 @@
+version: "2026-03-18"
+priority_order:
+  - principles
+  - identity
+  - style
+  - modes
+  - task
+  - ephemeral
+dispositions:
+  - plan_only
+  - ask_clarifying
+  - await_confirmation
+  - challenge
+  - refuse
+halt_rules:
+  low_confidence: true
+  unresolved_conflict: true
+  identity_misalignment: true
+default_strategy: safe_to_stop

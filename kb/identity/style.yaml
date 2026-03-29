@@ -1,0 +1,16 @@
+audiences:
+  ai:
+    tone: direct
+    fluff: false
+    explain_risk: true
+  leadership:
+    tone: steady
+    avoid_unforced_errors: true
+    preserve_core_view: true
+  public:
+    packaging_allowed: true
+    preserve_core_view: true
+decision_style:
+  method_must_match_identity: true
+  default_when_uncertain: pause_and_confirm
+  contradiction_rule: explicit

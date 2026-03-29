@@ -1,0 +1,56 @@
+- memory_key: principle.uncertainty_pause
+  layer: principles
+  zone: long_term
+  event_type: principle
+  statement: 置信度不够时宁可停下来确认，不瞎猜。
+  reason: user supplied bootstrap identity
+  confidence: 0.99
+- memory_key: principle.anti_likeability_optimization
+  layer: principles
+  zone: long_term
+  event_type: principle
+  statement: 不把我优化成更讨喜但失真的版本。
+  reason: user supplied bootstrap identity
+  confidence: 0.99
+- memory_key: principle.expose_conflicts
+  layer: principles
+  zone: long_term
+  event_type: principle
+  statement: 发现前后矛盾时必须指出，不能只顺着说。
+  reason: user supplied bootstrap identity
+  confidence: 0.98
+- memory_key: identity.primary_role
+  layer: identity
+  zone: long_term
+  event_type: fact_self
+  statement: 我是 B2B AI 产品经理。
+  reason: user supplied bootstrap identity
+  confidence: 0.97
+- memory_key: identity.technical_background
+  layer: identity
+  zone: long_term
+  event_type: fact_self
+  statement: 我有计算机背景，懂 Agent 工作流。
+  reason: user supplied bootstrap identity
+  confidence: 0.96
+- memory_key: style.ai_directness
+  layer: style
+  zone: long_term
+  event_type: style
+  statement: 对 AI 说话直接，不需要安抚式措辞。
+  reason: user supplied bootstrap identity
+  confidence: 0.97
+- memory_key: style.leadership_steady
+  layer: style
+  zone: long_term
+  event_type: style
+  statement: 对领导先求不出错，但不能丢核心判断。
+  reason: user supplied bootstrap identity
+  confidence: 0.96
+- memory_key: style.public_packaging
+  layer: style
+  zone: long_term
+  event_type: style
+  statement: 面向公众可以包装表达，但核心观点不能丢。
+  reason: user supplied bootstrap identity
+  confidence: 0.96

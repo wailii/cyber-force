@@ -1,0 +1,30 @@
+event_types:
+  principle:
+    target_layer: principles
+    auto_upgrade: false
+  meta_instruction:
+    target_layer: principles
+    auto_upgrade: false
+  fact_self:
+    target_layer: identity
+    auto_upgrade: false
+  preference:
+    target_layer: style
+    auto_upgrade: false
+  style:
+    target_layer: style
+    auto_upgrade: false
+  context_mode:
+    target_layer: modes
+    auto_upgrade: false
+  emotion:
+    target_layer: ephemeral
+    auto_upgrade: false
+    max_zone: short_term
+never_learn:
+  - fact_world
+  - task_decision
+source_priority:
+  - direct
+  - inferred
+  - external

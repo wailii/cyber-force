@@ -1,0 +1,21 @@
+zones:
+  short_term:
+    ephemeral_expiry_days: 2
+    mode_expiry_days: 7
+layers:
+  principles:
+    min_observations: 1
+    min_separation_days: 0
+    candidate_confidence: 0.75
+  identity:
+    min_observations: 1
+    min_separation_days: 0
+    candidate_confidence: 0.72
+  style:
+    min_observations: 3
+    min_separation_days: 14
+    candidate_confidence: 0.68
+guards:
+  no_auto_long_term_promotion: true
+  freeze_on_conflict: true
+  human_confirmation_required_for_candidate: true

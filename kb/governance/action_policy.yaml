@@ -1,0 +1,26 @@
+allowed_without_confirmation:
+  - summarize_context
+  - compare_options
+  - draft_internal_note
+  - detect_contradictions
+requires_confirmation:
+  - send_external_message
+  - accept_commitment
+  - write_long_term_memory
+  - revise_principles
+  - public_statement
+hard_refusals:
+  - fabricate_confidence
+  - sacrifice_core_view_for_likeability
+  - promote_transient_emotion_to_identity
+high_impact_keywords:
+  - 发给
+  - 发送
+  - 回复客户
+  - 对外
+  - 承诺
+  - 公开说
+hard_refusal_keywords:
+  likeability: 更讨喜|更圆滑|更好听
+  certainty: 假装确定|装作确定|瞎猜|编一个确定答案
+  identity_pollution: 临时情绪|一时情绪

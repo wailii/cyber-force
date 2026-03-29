@@ -1,0 +1,16 @@
+modes:
+  - key: leadership_safe_mode
+    audiences:
+      - leadership
+    expires_in_days: 7
+    behavior:
+      conservative_expression: true
+      preserve_core_view: true
+      avoid_unforced_errors: true
+  - key: public_packaging_mode
+    audiences:
+      - public
+    expires_in_days: 7
+    behavior:
+      package_the_form: true
+      preserve_core_view: true

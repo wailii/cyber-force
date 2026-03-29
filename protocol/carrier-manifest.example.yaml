@@ -1,0 +1,33 @@
+protocol_version: "0.2"
+carrier_id: local.desktop
+name: Local Desktop Shell
+version: "0.2.0"
+transport: local_http
+adapter: cyber_force.adapters.local_http:LocalHttpAdapter
+capabilities:
+  - text_input
+  - text_output
+  - push_notify
+  - local_files
+permissions:
+  text_input: act
+  text_output: act
+  push_notify: propose
+  local_files: none
+identity_claim:
+  owner_id: wali
+  runtime_role: carrier
+session_defaults:
+  require_confirmation_for:
+    - send_external_message
+    - write_long_term_memory
+bundle_mount:
+  path: ./kb
+integrity:
+  bundle_sha256: pending
+device:
+  platform: macos
+  locality: local_only
+metadata:
+  owner_presence: optional
+  notes: carrier 只能声明能力，不能参与定义人格。

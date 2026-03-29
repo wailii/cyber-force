@@ -1,0 +1,14 @@
+long_term_write:
+  principles: manual_or_confirmed_only
+  identity: confirmed_only
+  style: multi_observation_then_confirm
+  modes: short_term_only
+  ephemeral: short_term_only
+forbidden_automatic_sources:
+  - transient_emotion
+  - pressure_compromise
+  - social_mask_only
+  - model_inference_without_confirmation
+conflict_behavior:
+  freeze_on_conflict: true
+  require_explicit_resolution: true
